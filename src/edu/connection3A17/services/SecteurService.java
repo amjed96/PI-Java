@@ -44,7 +44,7 @@ public class SecteurService {
         
     }
     
-    public List<Secteur> afficher(){
+    public List<Secteur> afficherSecteur(){
         List<Secteur> myList = new ArrayList<>();
         
         try {
@@ -74,7 +74,7 @@ public class SecteurService {
             PreparedStatement pst = cnx.prepareStatement(request2);
             pst.setString(1, String.valueOf(id));
             pst.executeUpdate();
-            System.out.println("Secteur ajouté");
+            System.out.println("Secteur supprimé");
         }
         
         catch(SQLException ex){
@@ -92,6 +92,8 @@ public class SecteurService {
             pst.setString(2, s.getAdresse());
             pst.setString(3, s.getPays());
             pst.setString(4, String.valueOf(s.getId()));
+            pst.executeUpdate();
+            System.out.println("Secteur modifié");
         }
         
         catch(SQLException ex){

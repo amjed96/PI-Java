@@ -6,7 +6,9 @@
 package edu.connection3A17.test;
 
 import edu.connection3A17.entities.Personne;
+import edu.connection3A17.entities.Secteur;
 import edu.connection3A17.services.PersonneService;
+import edu.connection3A17.services.SecteurService;
 import edu.connection3A17.utils.MyConnection;
 
 /**
@@ -18,12 +20,17 @@ public class MainClass {
     public static void main(String[] args) {
         MyConnection mc = MyConnection.getInstance();
         MyConnection mc2 = MyConnection.getInstance();
-        Personne p = new Personne(0,"Ben Kbayer","Mimi");
+        // p = new Personne(0,"Ben","Mimi");
+        Secteur s = new Secteur(3,"Ennour","Kasserin","Tunisi");
         
-        PersonneService ps = new PersonneService();
+        //PersonneService ps = new PersonneService();
+        SecteurService ss = new SecteurService();
         //ps.ajouterPersonne();
+        ss.modifierSecteur(s);
+        //System.out.println(ss.afficherSecteur());
+        //ss.supprimerSecteur(1);
         
-        System.out.println(ps.afficher());
+        //System.out.println(ps.afficher());
         
         /*PersonneService ps = new PersonneService();
         ps.ajouterPersonne();*/
