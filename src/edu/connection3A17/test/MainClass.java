@@ -19,16 +19,16 @@ public class MainClass {
     
     public static void main(String[] args) {
         MyConnection mc = MyConnection.getInstance();
-        MyConnection mc2 = MyConnection.getInstance();
+        //MyConnection mc2 = MyConnection.getInstance();
         // p = new Personne(0,"Ben","Mimi");
-        Secteur s = new Secteur(3,"Ennour","Kasserin","Tunisi");
+        Secteur s = new Secteur(3,"Test","test","test");
         
         //PersonneService ps = new PersonneService();
         SecteurService ss = new SecteurService();
         //ps.ajouterPersonne();
         ss.modifierSecteur(s);
         //System.out.println(ss.afficherSecteur());
-        //ss.supprimerSecteur(1);
+        //ss.supprimerSecteur(4);
         
         //System.out.println(ps.afficher());
         

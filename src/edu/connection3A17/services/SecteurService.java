@@ -29,8 +29,8 @@ public class SecteurService {
     public void ajouterSecteur(Secteur s){
         
         try{
-            String request2 = "INSERT INTO secteur(nom,adresse,pays)" + "VALUES (?,?,?)";
-            PreparedStatement pst = cnx.prepareStatement(request2);
+            String request = "INSERT INTO secteur(nom,adresse,pays)" + "VALUES (?,?,?)";
+            PreparedStatement pst = cnx.prepareStatement(request);
             pst.setString(1, s.getNom());
             pst.setString(2, s.getAdresse());
             pst.setString(3, s.getPays());
@@ -49,8 +49,8 @@ public class SecteurService {
         
         try {
             
-            String request3 = "SELECT * FROM secteur";
-            PreparedStatement pst = cnx.prepareStatement(request3);
+            String request = "SELECT * FROM secteur";
+            PreparedStatement pst = cnx.prepareStatement(request);
             ResultSet rs = pst.executeQuery();
             while(rs.next()){
                 Secteur s = new Secteur();
@@ -70,8 +70,8 @@ public class SecteurService {
     public void supprimerSecteur(int id){
         
         try{
-            String request2 = "DELETE FROM secteur WHERE id = ?";
-            PreparedStatement pst = cnx.prepareStatement(request2);
+            String request = "DELETE FROM secteur WHERE id = ?";
+            PreparedStatement pst = cnx.prepareStatement(request);
             pst.setString(1, String.valueOf(id));
             pst.executeUpdate();
             System.out.println("Secteur supprimé");
