@@ -31,7 +31,7 @@ public class CategorieService {
             String request = "INSERT INTO categorie(nom_categorie,description)" + "VALUES (?,?)";
             PreparedStatement pst = cnx.prepareStatement(request);
             pst.setString(1, c.getNomcategorie());
-             pst.setString(1, c.getDescription());
+             pst.setString(2, c.getDescription());
             pst.executeUpdate();
             System.out.println("categorie ajouté");
         }
@@ -80,14 +80,14 @@ public class CategorieService {
         
     }
     
-    public void modifierSecteur(Categorie c){
+    public void modifierCategorie(Categorie c){
         
         try{
             String request = "UPDATE categorie SET nom_categorie = ?, description = ? WHERE id = ?";
             PreparedStatement pst = cnx.prepareStatement(request);
             pst.setString(1, c.getNomcategorie());
             pst.setString(2, c.getDescription());
-            pst.setString(4, String.valueOf(c.getId()));
+            pst.setString(3, String.valueOf(c.getId()));
             pst.executeUpdate();
             System.out.println("categorie modifié");
         }
