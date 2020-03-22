@@ -24,10 +24,11 @@ public class MainClass {
         //MyConnection mc2 = MyConnection.getInstance();
         // p = new Personne(0,"Ben","Mimi");
         Secteur s = new Secteur(3,"Test","test","test");
-        Categorie c = new Categorie(3,"haha","amjed");
+        Categorie c = new Categorie(3,"hahaaaaa","amjed");
         //PersonneService ps = new PersonneService();
         SecteurService ss = new SecteurService();
         CategorieService cc = new CategorieService();
+        //System.out.println(cc.afficherCategorie());
         //System.out.println(cc.afficherCategorie());
         //cc.ajouterCategorie(c);
         //cc.supprimerCategorie(21);
