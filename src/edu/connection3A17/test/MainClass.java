@@ -12,14 +12,21 @@ import edu.connection3A17.services.CategorieService;
 import edu.connection3A17.services.PersonneService;
 import edu.connection3A17.services.SecteurService;
 import edu.connection3A17.utils.MyConnection;
+import java.io.IOException;
+import javafx.application.Application;
+import static javafx.application.Application.launch;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 /**
  *
  * @author Amjed
  */
-public class MainClass {
+public class MainClass extends Application {
     
-    public static void main(String[] args) {
+   /* public static void main(String[] args) {
         MyConnection mc = MyConnection.getInstance();
         //MyConnection mc2 = MyConnection.getInstance();
         // p = new Personne(0,"Ben","Mimi");
@@ -43,6 +50,26 @@ public class MainClass {
         
         /*PersonneService ps = new PersonneService();
         ps.ajouterPersonne();*/
+    //}
+    
+     @Override
+    public void start(Stage primaryStage) throws IOException {
+        // Parent root = FXMLLoader.load(getClass().getResource("../Views/Main.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../views/test.fxml"));
+ 
+        Scene scene = new Scene(root);
+
+        primaryStage.setScene(scene);
+        primaryStage.show();
+
+    }
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        launch(args);
+
     }
     
 }

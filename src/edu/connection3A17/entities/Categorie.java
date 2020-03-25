@@ -19,6 +19,10 @@ public class Categorie {
         this.nomcategorie = nomcategorie;
         this.description = description;
     }
+       public Categorie(String nomcategorie, String description) {
+        this.nomcategorie = nomcategorie;
+        this.description = description;
+    }
     public Categorie() {
         
     }
