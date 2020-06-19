@@ -11,16 +11,16 @@ package edu.connection3A17.entities;
  */
 public class Categorie {
     private int id ;
-    private String nomcategorie ;
+    private String nom_categorie ;
     private String description ;
 
     public Categorie(int id, String nomcategorie, String description) {
         this.id = id;
-        this.nomcategorie = nomcategorie;
+        this.nom_categorie = nomcategorie;
         this.description = description;
     }
        public Categorie(String nomcategorie, String description) {
-        this.nomcategorie = nomcategorie;
+        this.nom_categorie = nomcategorie;
         this.description = description;
     }
     public Categorie() {
@@ -46,19 +46,19 @@ public class Categorie {
     }
 
     public String getNomcategorie() {
-        return nomcategorie;
+        return nom_categorie;
     }
 
-    public void setNomcategorie(String nomcategorie) {
-        this.nomcategorie = nomcategorie;
+    public void setNomcategorie(String nom_categorie) {
+        this.nom_categorie = nom_categorie;
     }
 
     @Override
     public String toString() {
-        return "Categorie{" + "id=" + id + ", nomcategorie=" + nomcategorie + ", description=" + description + '}';
+        return "Categorie{" + "id=" + id + ", nom_categorie=" + nom_categorie + ", description=" + description + '}';
     }
 
-  
+    
 
 
     

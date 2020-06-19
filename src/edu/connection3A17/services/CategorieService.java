@@ -63,7 +63,28 @@ public class CategorieService {
         }
         return myList;
     }
-    
+     public List<Categorie> afficherNomCategorie(){
+        List<Categorie> myList = new ArrayList<>();
+        
+        try {
+            
+            String request = "SELECT * FROM categorie";
+            PreparedStatement pst = cnx.prepareStatement(request);
+            ResultSet rs = pst.executeQuery();
+            while(rs.next()){
+           
+                Categorie c = new Categorie();
+                c.setId(rs.getInt("id"));
+                c.setNomcategorie(rs.getString("nom_categorie"));
+                c.setDescription(rs.getString("description"));
+                myList.add(c);
+            }
+            
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return myList;
+    }
     public void supprimerCategorie(int id){
         
         try{

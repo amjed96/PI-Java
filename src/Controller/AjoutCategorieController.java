@@ -70,7 +70,7 @@ public class AjoutCategorieController implements Initializable{
             @Override
             public void handle(ActionEvent event) {
                 try {
-                      Annuler.getScene().setRoot(FXMLLoader.load(getClass().getResource("../edu/connection3A17/views/test.fxml")));
+                      Annuler.getScene().setRoot(FXMLLoader.load(getClass().getResource("../edu/connection3A17/test/mainCategorie.fxml")));
         
                 } catch (IOException ex) {
                     Logger.getLogger(AjoutCategorieController.class.getName()).log(Level.SEVERE, null, ex);
